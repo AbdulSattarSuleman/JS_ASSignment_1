@@ -1,0 +1,193 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Assignment 03</title>
+        <script>
+           
+           //Task 1
+            
+            document.write("<br>Task 1<br>");
+            var qualification = ['1) Pre-Primary','2) Primary','3) SSC','4) F.A','5) FSc','6) ICS','7) I.COM','8) DBA','9) D.COM','10) BA/BSc','11) BS','12) B.E','13) B.Arch','14) BSc (Eng)','15) MA / MSc (16 Year)','16) LLB','17) B.COM','18) MBBA','19) PharmD','20) M.PHIL','21) MS','22) MBA','23) MSc','24) PhD'];
+            document.write("<h1> HEC based Qualifications </h1>");
+            for(var i=0;i<=qualification.length-1;i++){
+                document.write(qualification[i]+"<br>");
+            }
+            document.write("---------------------------------------------------------------------------------------");
+           
+            //Task 2
+            document.write("<br>Task 2<br>");
+
+            var students = ['Abdul Rehman','Saif-ul-Rehman','Haris Hanif'];
+            var studentScore = [300,400,450];
+            var totalMarks = 500;
+
+            for(var i=0;i<=2;i++){
+            var percentage = (studentScore[i]/totalMarks)*100;
+            document.write("<h3>Score of "+students[i]+" is "+studentScore[i]+". Percentage: "+percentage+"%<br> </h3>");
+            }
+            
+            //Task 3
+            //A
+            document.write("<br>Task 3<br>");
+            document.write("---------------------------------------------------------------------------------------");
+           
+            var color = ['Red','Green','Blue'];
+            var userWant = prompt("You Want to Add the Color at beginning");
+            if(userWant === 'yes'|| userWant === 'Yes'){
+                var userColor = prompt("Which Color Add at the beginning of Array ");
+                
+            color.unshift(userColor);
+            for(var i=0;i<=color.length-1;i++){
+                document.write("<br> Color Name "+color[i]);
+            }
+            }
+           
+            if(userWant === 'No'|| userWant === 'no'){
+                for(var i=0;i<=color.length-1;i++)
+                    document.write("<br>Colors Name "+color[i]);
+            }
+            
+            //Task 3
+            //B
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+            document.write("<br> Task 3(B) : Add One Element at the begins of Array <br>");
+            var color= ['White','Black','Blue'];
+            var userWant = prompt("Are you want to Add color at the end of the Array ");
+            if(userWant === 'Yes'|| userWant === 'yes'){
+                color.push(prompt("Which Color You Add at the end of Array "));
+
+                for(var i=0;i<=color.length-1;i++)
+                document.write("<br> Color Name : "+color[i]);
+            }
+            if(userWant === 'No'|| userWant=== 'no'){
+                for(var i=0;i<=color.length-1;i++)
+                document.write("<br>Color Names: "+color[i]);
+            }
+            document.write("<br>-----------------------------------------------------------------------------------------<br>");
+            //Task 3 (C)
+            document.write("<br>Task 3(C) Adding Three Element at the beginning of Array <br>");
+            color.unshift("Yellow",'Grey','Orange');
+            for(var i=0;i<=color.length-1;i++){
+                document.write("<br> color Name: "+color[i]);
+            }
+            //Task  3(D)
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+            document.write("<br> Task 3(D) Remove First Element of Array Color<br>");
+            color.shift();
+            for(var i=0;i<=color.length-1;i++){
+                document.write("<br> Color Name : "+color[i]);
+            }
+            //Task 3 (E)
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+            document.write("<br> task 3 (E)Remove Last Element of Array Color<br>");
+            color.pop();
+            for(var i=0;i<=color.length-1;i++){
+                document.write("<br> Color Name : "+color[i]);
+            }
+            //Task 3 (F)
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+            document.write("<br>Task 3(F) Add Element at Any Position <br>");
+            var index=prompt("At Which Index You Add Color name  ");
+            var userColor = prompt("<br>Add Color Name ");
+            color.splice(index,0,userColor);
+
+            for(i=0;i<=color.length-1;i++){
+                document.write("<br> Color Name ["+i+"] : "+color[i]);
+            }
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 3 (G)
+           document.write("<br>Task 3 (G) User Select Any Index And Delete The Array Elements<br>");
+           var whichIndex = prompt("Which Index You Want to Delete Colors"); 
+           var deleteColor = prompt("How many Delete the Color Name ");
+           color.splice(whichIndex,deleteColor);
+           for(var i=0;i<=color.length-1;i++){
+               document.write("<br>Color Name  ["+i+"]: "+color[i]);
+           }
+           
+           document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 4
+           document.write("<br>Task 4 <br>");
+           var cities = ['Karachi','Lahore','Islamabad','Quetta','Peshawar'];
+           var selectCities = cities.slice(-3,-1);
+           
+           document.write("<br><u><b>Cities List<br><br></b></u>");
+           document.write(cities);
+           document.write("<b><u><br><br>Selected Cities List: <br><br></b></u>");
+           document.write(selectCities);
+
+           document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 5
+           document.write("<br>Task 5  Removing Duplications of Data <br>");
+           var students = ['Qasim','Junaid','Abdul Sattar','Bilal','Saif','Qasim','Junaid','Bilal'];
+           document.write("<br><u>Students Names :     </u>"+students);
+           let newStudents = [...new Set(students)];
+            document.write("<br><u>Remove Duplicates :   </u>"+newStudents);
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 6
+           document.write("<br>Task 6 String Concatenation <br>");
+            var aCities = ['Karachi','Lahore','Islamabad','Faisalabad'];
+            var o = ['th','st','nd','rd'];
+            document.write("<br>1"+o[1]+" choice is "+aCities[0]);
+            document.write("<br>2"+o[2]+" choice is "+aCities[1]);
+            document.write("<br>3"+o[3]+" choice is "+aCities[2]);
+
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 7
+           document.write("<br>Task 7 Merge two arrays and remove duplicates <br><br><br>");
+           
+            var a = [10,20,4,40,60,70];
+            var b = [1,2,3,4,5,6,7,8,9,10];
+            var ab = b.concat(a)
+            let abc = [... new Set(ab)];
+            document.write(abc);
+            
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 8 A
+           document.write("<br>Task 8 Generate series  <br><br><br>");
+           document.write("Counting : ");
+           for(var i=1;i<=15;i++)
+            document.write(i+",   ");
+            document.write("<br><br><br>Reverse Counting :   ")
+            for(var i=10;i>=1;i--)
+            document.write(", "+i);
+            document.write("<br><br><br>Even :  ");
+            for(var i=0;i<=20;i++){
+                if((i%2)==0){
+                    document.write(i+", ");
+                }
+            }
+            
+            document.write("<br><br><br>Odd :  ");
+            for(var i=0;i<=20;i++){
+                if((i%2)==1){
+                    document.write(i+", ");
+                }
+            }
+            
+            document.write("<br><br><br>Series :  ");
+            for(var i=2;i<=20;i++){
+                if((i%2)==0){
+                    document.write(i+"K, ");
+                }
+            }
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 9
+           document.write("<br>Task 9 Print the largest Element<br><br><br>");
+           
+           var A = [24 , 53, 78, 91, 12];
+           document.write("<h2>Array Items : "+A);
+            var result = Math.max(...A);
+            document.write("<br><br>The Largest Number Is  "+result+"</h1>");
+            document.write("<br>------------------------------------------------------------------------------------------<br>");
+           //Task 10
+           document.write("<br>Task 10 Sorting From Smallest to Largest Numbers<br><br><br>");
+           var A =[20,53,78,4,91,12];
+           var A=A.sort(function(a,b){
+               return a-b
+           });
+           document.write(A);
+
+           
+        </script>
+    </head>
+</html>
